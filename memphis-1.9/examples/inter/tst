@@ -1,0 +1,10 @@
+// greatest common divisor
+
+x := 11;
+y := 22;
+WHILE x != y DO
+   IF x > y THEN x := x-y
+   ELSE y := y-x
+   FI
+OD;
+PRINT x

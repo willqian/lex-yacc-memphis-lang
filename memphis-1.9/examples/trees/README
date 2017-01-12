@@ -1,0 +1,13 @@
+EXAMPLE 1: TREES
+
+This initial examples introduces the basic concepts of Memphis.
+
+Domain declarations introduce data types by listing alternative
+ways to construct hierarchical values values.
+
+Match statements allow the processing of these values by giving rules for
+the alternatives. Rules are selected by matching a value against a posibly
+nested pattern.
+
+The example defines a data type Tree and function that traverses
+values of this type.

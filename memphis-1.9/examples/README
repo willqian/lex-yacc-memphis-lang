@@ -1,0 +1,65 @@
+EXAMPLE 1: TREES
+
+This initial examples introduces the basic concepts of Memphis.
+
+Domain declarations introduce data types by listing alternative
+ways to construct hierarchical values values.
+
+Match statements allow the processing of these values by giving rules for
+the alternatives. Rules are selected by matching a value against a posibly
+nested pattern.
+
+The example defines a data type Tree and function that traverses
+values of this type.
+
+EXAMPLE 2: SUBTYPES
+
+This example program shows how values of domain types
+may be used like objects.
+
+The "->" notation can be used to access and update their fields.
+Subtypes allow to manipulate the fields in type-safe way
+outside of match statements.
+
+The example uses the Tree type from Example 1 and gives functions to
+update the fields of a node.
+
+Note that the possibility to update fields introduces the full
+power of general graph structures.
+
+EXAMPLE 3: MULTI
+
+This example shows how to process multiple file programs.
+
+The TREES example is splitted into two files:
+`treedef.m' provides the domain definition,
+`treeuse.m' contains a match statement that processes Trees.
+
+
+EXAMPLE 4: INTER
+
+This example shows how Memphis can be used to describe and process
+abstract syntax trees. The cooperation with Lex and Yacc is demonstrated.
+
+The example implements an interpreter for a tiny programming langauge.
+
+EXAMPLE 5: POLISH
+
+This example shows how Memphis can be used to process
+Gentle structures in C/C++ code.
+
+Like Memphis, Gentle supports domains types and pattern matching.
+Unlike Memphis, Gentle provides a high level of abstraction to express
+language recognition, transformation, and code generation in a uniform way. 
+Combining Gentle and Memphis allows one to use a specialized and
+productive compiler description language for the translation tasks of an
+application, and also to use C/C++ programming e.g. to implement the user
+interface.  Memphis enables seamless integration of Gentle and C/C++.
+
+The example defines a domain type for symbolic expressions
+and gives a grammar to construct these expressions from linear input.
+It gives two procedures to emit such expressions in "polish" and in
+"reverse polish notation". The first procedure is a Gentle predicate,
+the second one is a Memphis function.
+
+(Requires Gentle 98 or higher)

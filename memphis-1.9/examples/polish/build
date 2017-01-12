@@ -1,0 +1,41 @@
+#!/bin/sh
+
+set -e
+set -x
+
+GENTLEHOME=$HOME/gentle
+GENTLE=$GENTLEHOME/gentle/gentle
+GRTS=$GENTLEHOME/gentle/grts.o
+REFLEX=$GENTLEHOME/reflex/reflex
+LIB=$GENTLEHOME/lib
+
+LEX=lex
+YACC=yacc
+
+MEMPHIS=../../memphis/memphis
+MRTS=../../mrts/mrts.o
+
+CPP=g++
+
+$GENTLE -h spec.g
+
+$REFLEX
+
+$LEX gen.l
+
+$YACC gen.y
+
+$MEMPHIS polish.m
+
+gcc -c spec.c lex.yy.c y.tab.c
+$CPP -o polish \
+   spec.o \
+   lex.yy.o \
+   y.tab.o \
+   polish.cpp \
+   $LIB/errmsg.o \
+   $LIB/main.o \
+   $GRTS \
+   $MRTS
+
+./polish tst

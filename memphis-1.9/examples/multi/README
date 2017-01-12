@@ -1,0 +1,8 @@
+EXAMPLE 3: MULTI
+
+This example shows how to process multiple file programs.
+
+The TREES example is splitted into two files:
+`treedef.m' provides the domain definition,
+`treeuse.m' contains a match statement that processes Trees.
+

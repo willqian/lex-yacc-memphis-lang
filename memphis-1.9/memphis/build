@@ -1,0 +1,22 @@
+set -e
+set -x
+
+cc   -c  grammar.c
+cc   -c  sig.c
+cc   -c  cpp.c
+cc   -c  auxil.c
+cc   -c  yytab.c
+cc   -c  yylex.c
+cc   -c  errmsg.c
+cc   -c  idents.c
+cc   -c  grts.c
+cc   -c  text.c
+cc   -c  main.c
+
+cc -o memphis \
+   grammar.o sig.o cpp.o auxil.o \
+   yytab.o yylex.o \
+   main.o text.o \
+   errmsg.o idents.o grts.o
+
+echo OK

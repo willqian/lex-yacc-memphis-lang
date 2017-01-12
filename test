@@ -1,0 +1,14 @@
+// greatest common divisor
+
+x := 11;
+y := 22;
+while x != y do
+   if x > y then x := x-y
+   else y := y-x
+   fi
+od;
+print x + y;
+z := 33;
+h := 31;
+print z + h + x + y;
+a := 1

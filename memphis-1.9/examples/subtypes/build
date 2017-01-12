@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+set -x
+
+MEMPHIS=../../memphis/memphis
+MRTS=../../mrts/mrts.o
+CPP=g++
+
+$MEMPHIS prog.m 
+$CPP -c prog.cpp
+$CPP -o prog prog.o $MRTS
+./prog

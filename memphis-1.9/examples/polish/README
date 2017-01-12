@@ -1,0 +1,20 @@
+EXAMPLE 5: POLISH
+
+This example shows how Memphis can be used to process
+Gentle structures in C/C++ code.
+
+Like Memphis, Gentle supports domains types and pattern matching.
+Unlike Memphis, Gentle provides a high level of abstraction to express
+language recognition, transformation, and code generation in a uniform way. 
+Combining Gentle and Memphis allows one to use a specialized and
+productive compiler description language for the translation tasks of an
+application, and also to use C/C++ programming e.g. to implement the user
+interface.  Memphis enables seamless integration of Gentle and C/C++.
+
+The example defines a domain type for symbolic expressions
+and gives a grammar to construct these expressions from linear input.
+It gives two procedures to emit such expressions in "polish" and in
+"reverse polish notation". The first procedure is a Gentle predicate,
+the second one is a Memphis function.
+
+(Requires Gentle 98 or higher)

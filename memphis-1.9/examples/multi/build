@@ -1,0 +1,20 @@
+#!/bin/sh
+
+set -e
+set -x
+
+MEMPHIS=../../memphis/memphis
+MRTS=../../mrts/mrts.o
+CPP=g++
+
+$MEMPHIS -h treedef.m
+
+$MEMPHIS treedef.m
+$MEMPHIS treeuse.m
+
+$CPP -c treedef.cpp
+$CPP -c treeuse.cpp
+
+$CPP -o walker treedef.o treeuse.o $MRTS
+
+./walker

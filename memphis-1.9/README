@@ -1,0 +1,63 @@
+
+  WELCOME TO MEMPHIS,
+     a C/C++ extension for compiler writers.
+
+     Memphis adds grammatical types and tree pattern matching
+     as found in functional languages and modern compiler construction tools.
+     Experience has shown that these concepts provide a powerful framework
+     for abstract syntax construction and tree processing.
+
+     Memphis acts as a precompiler that translates domain declarations
+     and match statements into C++ code and copies original C/C++ constructs
+     directly into the target program.
+
+     Take a look at the file
+	examples/trees/prog.m
+     for a first example introducing domain declarations and match statements.
+
+  INSTALLATION
+     To install the Memphis precompiler go to directory
+	memphis
+     and type
+	build
+
+     You also need a small library function that has to be linked
+     to your Memphis programs. To provide this go to directory
+	mrts
+     and type
+	build
+
+  USAGE
+     To test your installation go to directory
+	examples/trees
+     and type
+	build
+
+  DOCUMENTATION
+     The directory
+	doc
+     contains the following documents :
+	primer.ps    ``Memphis C/C++, A Language for Compiler Writers''
+	language.ps  ``Memphis Language Reference Manual''
+	usage.ps     ``Memphis User Manual''
+
+  EXAMPLES
+     The directory
+	examples
+     provides some small examples. See the file
+	README
+     in that directory.
+
+  LICENSE
+     Memphis is provided at no charge
+     for personal usage, educational purposes,
+     and the development of non-commercial software.
+     See the file
+	LICENSE
+     for the conditions.
+
+  SUPPORT
+
+     Please send questions and bug reports to
+     support@compilertools.net
+

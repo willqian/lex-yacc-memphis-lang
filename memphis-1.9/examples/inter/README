@@ -1,0 +1,6 @@
+EXAMPLE 4: INTER
+
+This example shows how Memphis can be used to describe and process
+abstract syntax trees. The cooperation with Lex and Yacc is demonstrated.
+
+The example implements an interpreter for a tiny programming langauge.

@@ -1,0 +1,14 @@
+EXAMPLE 2: SUBTYPES
+
+This example program shows how values of domain types
+may be used like objects.
+
+The "->" notation can be used to access and update their fields.
+Subtypes allow to manipulate the fields in type-safe way
+outside of match statements.
+
+The example uses the Tree type from Example 1 and gives functions to
+update the fields of a node.
+
+Note that the possibility to update fields introduces the full
+power of general graph structures.

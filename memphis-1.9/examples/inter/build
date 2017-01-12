@@ -1,0 +1,30 @@
+#!/bin/sh
+
+set -e
+set -x
+
+MEMPHIS=../../memphis/memphis
+MRTS=../../mrts/mrts.o
+LEX=lex
+YACC=yacc
+C=gcc
+CPP=g++
+
+$LEX tokens.l
+
+$YACC -d grammar.y
+
+$MEMPHIS -h ast.m
+
+$MEMPHIS ast.m
+$MEMPHIS inter.m
+
+$C -c lex.yy.c 
+$C -c y.tab.c 
+$C -c main.c 
+$C -c err.c 
+$CPP -c ast.cpp 
+$CPP -c inter.cpp 
+$CPP -o interpret *.o $MRTS
+
+./interpret < tst
